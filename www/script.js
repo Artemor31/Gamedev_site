@@ -22,13 +22,10 @@ $(function(){
 		else {
 			header.removeClass("fixed");
 		}
-		// progress bar
-		var ratio = $(document).scrollTop() 
-		/ (($(document).height() - $(window).height()) /100);
-		progressbar.width(ratio + "%");
 
 	});
 });
+
 
 window.onload = function(){ 
 
@@ -130,8 +127,6 @@ window.onload = function(){
 	function scaleDownImages(e){
 	    this.style.width = "30%";
 	}
-
-
 
 
 	function StartTimer() {

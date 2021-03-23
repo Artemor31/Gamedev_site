@@ -56,8 +56,12 @@
 	</div>
 
 	<div class="container">
+	
+    <?php
+        require('emailSender.php');
+    ?>
 		<div class="feedback__form">
-			<form class="form_message">
+			<form class="form_message" action="ContsctUs.php" method="post">
 				<p class="form__headliner">
 					Submit your message
 				</p>
@@ -79,7 +83,7 @@
 					<p>
 						Your phone:
 					</p>
-					<input id="input__number" class="input" name="subjects" type="text"/>
+					<input id="input__number" class="input" name="phone" type="text"/>
 					<div id="phone_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
