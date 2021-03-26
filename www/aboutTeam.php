@@ -17,6 +17,7 @@
     require('header.php');
 ?>
 
+<div id="progress_line"></div>
 <div class="intro_about">	
 	<div class="container">
 		<div class="about__inner">

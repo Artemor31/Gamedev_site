@@ -12,24 +12,34 @@
 </head>
 
 <body>
-    <?php
-        require('header.php');
-    ?>    
-    <div class="intro" id="intro">
-        <div class="container">
-            <div class="inner">
-                <h1 class="intro__title" id="intro__title">
-                    We don't create games. <br> We create fun.
-                </h1>
-                <a href="" class="title__button">
-                    <img src="img/playIcon.png" alt="">
-                    <div class="intro__button_text">
-                        Explore more
-                    </div>
-                </a>
-            </div>
+
+<?php
+    require('header.php');
+?>    
+
+<div class="upBttn">
+    <div class="arrow">&#8593;</div>
+</div>
+<div id="progress_line"></div>
+
+<div class="intro" id="intro">
+    <div class="container">
+        <div class="inner">
+            <h1>We create
+            <span class="typer" id="main" data-words="games,fun" data-colors="#ed426d,#6d67c6" 
+                     data-loop="1" data-delay="300" data-deleteDelay="1000">
+            </span>
+            <span class="cursor" data-owner="main"></span>
+            </h1>            
+            <a href="" class="title__button">
+                <img src="img/playIcon.png" alt="">
+                <div class="intro__button_text">
+                    Explore more
+                </div>
+            </a>
         </div>
     </div>
+</div>
 
 <div class="container">
     <h1 class="features__title">
@@ -137,7 +147,7 @@
 ?> 
 
 <script src="script.js"></script>
-
+<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
 </body>
 </html>
 

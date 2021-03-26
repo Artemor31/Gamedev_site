@@ -1,11 +1,4 @@
 
-<body>
-<div class="progressbar">
-    <div class="progressbar__inner">
-
-    </div>
-</div>
-
 <header class="header" id="header">
     <div class="container">
         <div class="header__top">

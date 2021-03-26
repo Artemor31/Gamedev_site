@@ -1,11 +1,13 @@
-<?php
-$to = "bogunovartyom@yandex.ru"; // емайл получателя данных из формы
-$tema = "Форма обратной связи на PHP"; // тема полученного емайла
-$message = "Ваше имя: ".$_POST['name']."<br>";//присвоить переменной значение, полученное из формы name=name
-  $message .= "E-mail: ".$_POST['email']."<br>"; //полученное из формы name=email
-$message .= "Номер телефона: ".$_POST['phone']."<br>"; //полученное из формы name=phone
-$message .= "Сообщение: ".$_POST['message']."<br>"; //полученное из формы name=message
-$headers  = 'MIME-Version: 1.0' . "\r\n"; // заголовок соответствует формату плюс символ перевода строки
-  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n"; // указывает на тип посылаемого контента
-mail($to, $tema, $message, $headers); //отправляет получателю на емайл значения переменных
-?>
+	<?php 
+		$to  = "bogunovartyom@yandex.ru"; 
+
+		$subject = "Заголовок письма"; 
+
+		$message = ' <p>Текст письма</p> </br> <b>1-ая строчка </b> </br><i>2-ая строчка </i> </br>';
+
+		$headers  = "Content-type: text/html; charset=windows-1251 \r\n"; 
+		$headers .= "From: От кого письмо <from@example.com>\r\n"; 
+		$headers .= "Reply-To: reply-to@example.com\r\n"; 
+
+		mail($to, $subject, $message, $headers); 
+	?>

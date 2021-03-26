@@ -1,5 +1,11 @@
 <?php
-    $dirname = '/folder/'; // указываем полный путь до папки или файла 
+
+    $dirname = $_GET['subject']; // указываем полный путь до папки или файла 
+    if($dirname == ""){
+        echo("Please, enter path");
+        return;
+    }
+    
     $size = dir_size($dirname); //заносим в переменную размер папки или файла
     $formSize = format_size($size); //форматируем вывод
     echo $formSize;
@@ -24,11 +30,11 @@
     }
     // функция форматирует вывод размера
     function format_size($size){
-         $metrics[0] = 'байт';
-         $metrics[1] = 'Кбайт';
-         $metrics[2] = 'Мбайт';
-         $metrics[3] = 'Гбайт';
-         $metrics[4] = 'Тбайт';
+         $metrics[0] = 'bites';
+         $metrics[1] = 'Kb';
+         $metrics[2] = 'Mb';
+         $metrics[3] = 'Gb';
+         $metrics[4] = 'Tb';
          $metric = 0;         
          while(floor($size/1024) > 0){
              ++$metric;

@@ -12,6 +12,8 @@
                     <a href="index.php" class="footer__link">About us <br></a>
                     <a href="aboutTeam.php" class="footer__link">Our team<br></a>
                     <a href="ContsctUs.php" class="footer__link">Contact us</a>
+                    <p></p>
+                    <a href="TasksPage.php" class="footer__link">Tasks</a>
                 </div>
             </div>
             <div class="footer__item">

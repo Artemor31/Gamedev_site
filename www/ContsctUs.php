@@ -16,6 +16,7 @@
         require('header.php');
     ?>
 
+<div id="progress_line"></div>
 	<div class="title__img">
 		<img src="img/teamwork_support.png" alt="">
 	</div>
@@ -55,11 +56,7 @@
 		</div>
 	</div>
 
-	<div class="container">
-	
-    <?php
-        require('emailSender.php');
-    ?>
+	<div class="container">	
 		<div class="feedback__form">
 			<form class="form_message" action="ContsctUs.php" method="post">
 				<p class="form__headliner">
@@ -70,13 +67,31 @@
 						Your Name:
 					</p>
 					<input id="input__name" class="input" name="name" type="text"/>
+						<?php
+							$usernameRegex = '/^(?=[a-z]{2})(?=.{4,26})(?=[^.]*\.?[^.]*$)(?=[^_]*_?[^_]*$)[\w.]+$/iD';
+							$username = $_POST['name'];
+
+							if (!preg_match($usernameRegex, $username)){
+							}else{
+							echo "username ok";
+							}
+						?>
 					<div id="name_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
 					<p>
 						Your E-mail:
 					</p>
-					<input id="input__email" class="input" name="email" type="text"/>
+					<input id="input__email" class="input" name="email" type="text"/>					
+						<?php
+							$emailRegex = "/^[a-zA-Zа-яА-ЯёЁ_\d][-a-zA-Zа-яА-ЯёЁ0-9_\.\d]*\@[a-zA-Zа-яА-ЯёЁ\d][-a-zA-Zа-яА-ЯёЁ\.\d]*\.[a-zA-Zа-яА-Я]{2,6}$/i";
+							$email = $_POST['email'];
+
+							if (!preg_match($emailRegex, $email)){
+							}else{
+							echo "email ok";
+							}
+						?>
 					<div id="email_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
@@ -84,6 +99,15 @@
 						Your phone:
 					</p>
 					<input id="input__number" class="input" name="phone" type="text"/>
+						<?php
+							$numberRegex = "/^[0-9+]/";
+							$number = $_POST['phone'];
+
+							if (!preg_match($numberRegex, $number)){
+							}else{
+							echo "number ok";
+							}
+						?>
 					<div id="phone_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
@@ -97,6 +121,7 @@
 			</form>
 		</div>
 	</div>
+
 
 	<div class="container">
 		<div class="support">

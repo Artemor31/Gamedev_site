@@ -28,6 +28,17 @@ $(function(){
 
 
 window.onload = function(){ 
+	var line = document.getElementById('progress_line');
+	window.addEventListener('scroll', progressBar);
+		
+	function progressBar(e) {
+	var windowScroll = document.body.scrollTop || 
+	document.documentElement.scrollTop;
+	var windowHeight = document.documentElement.scrollHeight - 
+	document.documentElement.clientHeight; 
+	var width_progress_line = windowScroll / windowHeight * 100;
+	line.style.width = width_progress_line + '%';
+	}
 
     StartTimer();
 
@@ -72,7 +83,28 @@ window.onload = function(){
 		}
 	}	
 
+	debugger;
+	//scroll bttn
+	var bttn = document.querySelector('.upBttn');
+	window.addEventListener('scroll', upScroll);
+	
+	function upScroll(){
+		if (window.pageYOffset > 20){
+			bttn.style.opacity='0.5';
+		} else{
+			bttn.style.opacity='0';
+		}
+	}
 
+	bttn.onmouseover = function(){
+		this.style.opacity='1';
+	}
+	bttn.onmouseout= function(){
+		this.style.opacity='0.5';
+	}
+	bttn.onclick = function(){
+		window.scrollTo(0,0);
+	}
 
 	/*let submitBtn = document.getElementById('submit');
 	if(submitBtn != null){
