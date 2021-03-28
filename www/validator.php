@@ -1,4 +1,3 @@
-
 <?php
     $usernameRegex = '/^[a-zA-Zа-яА-ЯёЁ_]/';
     $username = $_POST['name'];
@@ -16,7 +15,7 @@
         $isCorrect = false;
         $name_error = "Enter name!";
     }
-    elseif(false)//!preg_match($usernameRegex, $username))
+    elseif(!preg_match($usernameRegex, $username))
     {
         $isCorrect = false;
         $name_error = "Invalid name!";
@@ -27,7 +26,7 @@
         $isCorrect = false;
         $email_error = "Enter email!";
     }
-    elseif(false)//!preg_match($emailRegex, $email))
+    elseif(!preg_match($emailRegex, $email))
     {
         $isCorrect = false;
         $email_error = "Invalid email!";
@@ -38,7 +37,7 @@
         $isCorrect = false;
         $number_error = "Enter number!";
     }
-    elseif(false)//!preg_match($numberRegex, $number))
+    elseif(!preg_match($numberRegex, $number))
     {
         $isCorrect = false;
         $number_error = "Invalid number!";
@@ -58,10 +57,7 @@
     {
         include('emailSender.php');
     }
-
     include('ContsctUs.php');
-
-
 
     //echo"<p style='color: red;'>Invalid email</p>";
 ?>
