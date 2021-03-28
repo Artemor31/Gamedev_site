@@ -1,5 +1,6 @@
 	<?php 
-		$to  = "bogunovartyom@yandex.ru"; 
+		$to  = "artem.artemov311@gmail.com";
+		
 
 		$subject = "Заголовок письма"; 
 

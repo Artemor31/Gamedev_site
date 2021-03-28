@@ -1,5 +1,11 @@
 
+<div class="upBttn">
+    <div class="arrow">&#8593;</div>
+</div>
+
+
 <header class="header" id="header">
+<div id="progress_line"></div>
     <div class="container">
         <div class="header__top">
             <div class="header__logo">

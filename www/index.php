@@ -17,11 +17,6 @@
     require('header.php');
 ?>    
 
-<div class="upBttn">
-    <div class="arrow">&#8593;</div>
-</div>
-<div id="progress_line"></div>
-
 <div class="intro" id="intro">
     <div class="container">
         <div class="inner">

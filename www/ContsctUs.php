@@ -58,56 +58,47 @@
 
 	<div class="container">	
 		<div class="feedback__form">
-			<form class="form_message" action="ContsctUs.php" method="post">
+			<form class="form_message" action="validator.php" method="POST">
 				<p class="form__headliner">
 					Submit your message
 				</p>
 				<div class="titles">
+				<!--
+					Name Input
+				 -->
 					<p>
 						Your Name:
 					</p>
-					<input id="input__name" class="input" name="name" type="text"/>
-						<?php
-							$usernameRegex = '/^(?=[a-z]{2})(?=.{4,26})(?=[^.]*\.?[^.]*$)(?=[^_]*_?[^_]*$)[\w.]+$/iD';
-							$username = $_POST['name'];
-
-							if (!preg_match($usernameRegex, $username)){
-							}else{
-							echo "username ok";
-							}
-						?>
+					<input id="input__name" class="input" name="name" type="text" value="<?php echo $username?>"/>
+						<?php if(isset($name_error)) { ?>
+							<p style='color: red;'><?php echo $name_error?></p>
+						<?php } ?>						
 					<div id="name_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
+				<!--
+					E-mail Input
+				 -->
 					<p>
 						Your E-mail:
 					</p>
-					<input id="input__email" class="input" name="email" type="text"/>					
-						<?php
-							$emailRegex = "/^[a-zA-Zа-яА-ЯёЁ_\d][-a-zA-Zа-яА-ЯёЁ0-9_\.\d]*\@[a-zA-Zа-яА-ЯёЁ\d][-a-zA-Zа-яА-ЯёЁ\.\d]*\.[a-zA-Zа-яА-Я]{2,6}$/i";
-							$email = $_POST['email'];
-
-							if (!preg_match($emailRegex, $email)){
-							}else{
-							echo "email ok";
-							}
-						?>
+					<input id="input__email" class="input" name="email" type="text" value="<?php echo $email?>"/>					
+						<?php if(isset($email_error)) { ?>
+							<p style='color: red;'><?php echo $email_error?></p>
+						<?php } ?>
 					<div id="email_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
+				<!--
+					phone Input
+				 -->
 					<p>
 						Your phone:
 					</p>
-					<input id="input__number" class="input" name="phone" type="text"/>
-						<?php
-							$numberRegex = "/^[0-9+]/";
-							$number = $_POST['phone'];
-
-							if (!preg_match($numberRegex, $number)){
-							}else{
-							echo "number ok";
-							}
-						?>
+					<input id="input__number" class="input" name="phone" type="text" value="<?php echo $number?>"/>
+						<?php if(isset($number_error)) { ?>
+							<p style='color: red;'><?php echo $number_error?></p>
+						<?php } ?>
 					<div id="phone_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">

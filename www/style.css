@@ -20,22 +20,6 @@ box-sizing: border-box;
 	max-width: 1100px;
 	margin: 0 auto;
 }
-/* ProgressBar */
-/* ================================= */
-
-.progressbar{
-	width: 100%;
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	height: 40px;
-	z-index: 50;
-}
-.progressbar__inner{
-	background-color: #f00;
-	width: 1px;
-	height: 40px;
-}
 
 /* top menu */
 /* ================================= */
@@ -620,11 +604,14 @@ box-sizing: border-box;
 }
 
 #progress_line {
-    position: fixed;
+	display: inline;
     top: 0;
     left: 0;
     width: 0%;
-    height: 6px;
-    background: rgb(44, 42, 165);
-	z-index: 110;
+    height: 55px;
+    background: rgba(61, 139, 202, 0.397);
+	z-index: -1;
+}
+#progress_line.fixed{
+	position: fixed;
 }

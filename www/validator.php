@@ -1,38 +1,65 @@
 
-
-
 <?php
-$usernameRegex = '/^(?=[a-z]{2})(?=.{4,26})(?=[^.]*\.?[^.]*$)(?=[^_]*_?[^_]*$)[\w.]+$/iD';
-$username = $_POST['name'];
+    $usernameRegex = '/^[a-zA-Zа-яА-ЯёЁ_]/';
+    $username = $_POST['name'];
+    $emailRegex = "/^[a-zA-Zа-яА-ЯёЁ_\d][-a-zA-Zа-яА-ЯёЁ0-9_\.\d]*\@[a-zA-Zа-яА-ЯёЁ\d][-a-zA-Zа-яА-ЯёЁ\.\d]*\.[a-zA-Zа-яА-Я]{2,6}$/i";
+    $email = $_POST['email'];
+    $numberRegex = "/^[0-9+]/";
+    $number = $_POST['phone'];
 
-if (!preg_match($usernameRegex, $username)){
-}else{
- echo "username ok";
-}
+    $isCorrect = true;
+
+    if(empty($username))
+    {
+        $isCorrect = false;
+        $name_error = "Enter name!";
+    }
+    elseif(!preg_match($usernameRegex, $username))
+    {
+        $isCorrect = false;
+        $name_error = "Invalid name!";
+    }
+
+
+    if(empty($email))
+    {
+        $isCorrect = false;
+        $email_error = "Enter email!";
+    }
+    elseif(!preg_match($emailRegex, $email))
+    {
+        $isCorrect = false;
+        $email_error = "Invalid email!";
+    }
+
+
+    if(empty($number))
+    {
+        $isCorrect = false;
+        $number_error = "Enter number!";
+    }
+    elseif(!preg_match($numberRegex, $number))
+    {
+        $isCorrect = false;
+        $number_error = "Invalid number!";
+    }
+    elseif(strlen($number) > 11 || strlen($number) < 6)
+    {
+        $isCorrect = false;
+        $number_error = "Invalid number!";
+    }
+
+    if($isCorrect)
+    {
+        include('emailSender.php');
+    }
+
+    include('ContsctUs.php');
+
+
+
+    //echo"<p style='color: red;'>Invalid email</p>";
 ?>
-
-
-<?php
-$emailRegex = "/^[a-zA-Zа-яА-ЯёЁ_\d][-a-zA-Zа-яА-ЯёЁ0-9_\.\d]*\@[a-zA-Zа-яА-ЯёЁ\d][-a-zA-Zа-яА-ЯёЁ\.\d]*\.[a-zA-Zа-яА-Я]{2,6}$/i";
-$email = $_POST['email'];
-
-if (!preg_match($emailRegex, $email)){
-}else{
- echo "email ok";
-}
-?>
-
-
-<?php
-$numberRegex = "/^[0-9+]/";
-$number = $_POST['phone'];
-
-if (!preg_match($numberRegex, $number)){
-}else{
- echo "number ok";
-}
-?>
-
 
 
 

@@ -1,10 +1,8 @@
 $(function(){
 
 	let header = $("#header");
+	let progress = $("#progress_line");
 	let intro = $("#intro");
-
-	let progressbar = $("#progressbar__inner");
-	let progress = $("#progressbar");
 
 	let scrollPos = $(window).scrollTop();
 	let introHg = intro.innerHeight();
@@ -17,10 +15,12 @@ $(function(){
 
 		scrollPos = $(this).scrollTop();
 		if(scrollPos > 750){
-			header.addClass("fixed");		
+			header.addClass("fixed");	
+			progress.addClass("fixed");		
 		}
 		else {
 			header.removeClass("fixed");
+			progress.removeClass("fixed");
 		}
 
 	});
