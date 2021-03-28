@@ -7,6 +7,8 @@
     $numberRegex = "/^[0-9+]/";
     $number = $_POST['phone'];
 
+    $message = $_POST['message'];
+
     $isCorrect = true;
 
     if(empty($username))
@@ -14,31 +16,29 @@
         $isCorrect = false;
         $name_error = "Enter name!";
     }
-    elseif(!preg_match($usernameRegex, $username))
+    elseif(false)//!preg_match($usernameRegex, $username))
     {
         $isCorrect = false;
         $name_error = "Invalid name!";
     }
-
 
     if(empty($email))
     {
         $isCorrect = false;
         $email_error = "Enter email!";
     }
-    elseif(!preg_match($emailRegex, $email))
+    elseif(false)//!preg_match($emailRegex, $email))
     {
         $isCorrect = false;
         $email_error = "Invalid email!";
     }
-
 
     if(empty($number))
     {
         $isCorrect = false;
         $number_error = "Enter number!";
     }
-    elseif(!preg_match($numberRegex, $number))
+    elseif(false)//!preg_match($numberRegex, $number))
     {
         $isCorrect = false;
         $number_error = "Invalid number!";
@@ -47,6 +47,11 @@
     {
         $isCorrect = false;
         $number_error = "Invalid number!";
+    }
+
+    if(strlen($message) < 10)
+    {
+        $isCorrect = false;
     }
 
     if($isCorrect)
