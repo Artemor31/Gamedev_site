@@ -102,11 +102,8 @@
 					<div id="phone_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
-					<p>
-						Text:
-					</p>
+					<p>Text:</p>
 					<textarea id="input__text" class="input" name="message" cols="22" rows="5"></textarea>
-					<div id="text_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<input id="submit" class="submit" value="Send" type="submit"/>
 			</form>

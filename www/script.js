@@ -42,9 +42,9 @@ window.onload = function(){
 
     StartTimer();
 
-	//let regexAlphabet = /[a-z]/;
-	//let regexEmail = /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+.+.[a-z]/;
-	//let regexNumbers = /[0-9-a-z]]/;
+	let regexAlphabet = /[A-Za-z]/;
+	let regexEmail = /[A-Za-z0-9\._\-]+@[A-Za-z]+\.[a-z]/;
+	let regexNumbers = /[0-9]+/;
 
 	closeMenu();
 
@@ -83,7 +83,6 @@ window.onload = function(){
 		}
 	}	
 
-	debugger;
 	//scroll bttn
 	var bttn = document.querySelector('.upBttn');
 	window.addEventListener('scroll', upScroll);
@@ -106,15 +105,12 @@ window.onload = function(){
 		window.scrollTo(0,0);
 	}
 
-	/*let submitBtn = document.getElementById('submit');
+	let submitBtn = document.getElementById('submit');
 	if(submitBtn != null){
 		submitBtn.onclick = function(e){
-			e.preventDefault();
-
 			let nameArea = document.getElementById('input__name');
 			let emailArea = document.getElementById('input__email');
 			let phoneArea = document.getElementById('input__number');
-			let textArea = document.getElementById('input__text');
 
 			let nameColorer = document.getElementById('name_colorer');
 			indicateInput(isValid(regexAlphabet, nameArea), nameColorer);
@@ -124,27 +120,22 @@ window.onload = function(){
 
 			let phoneColorer = document.getElementById('phone_colorer');
 			indicateInput(isValid(regexNumbers, phoneArea), phoneColorer);
-
-			let textColorer = document.getElementById('text_colorer');
-			indicateInput(isValid(true, textArea), textColorer);
-
-			return false;		
+	
 		}
 	}
-
 	function isValid(reg, input){
-		var booler = reg.test(input);
+		var booler = reg.test(input.value);
 		var booler2 = input.value != "";
 		return booler && booler2;
 	}
-
 	function indicateInput(isValid, element){
 		if(!isValid){
 		 element.innerHTML = "Incorrect value";
 		} else {			
 			element.innerHTML = "";
 		}		
-	} */
+	}
+
 
 	let memberImages = document.getElementsByClassName("member_photo");
 	for (var i = 0; i < memberImages.length; i++) {
@@ -153,11 +144,11 @@ window.onload = function(){
 	}
 
 	function scaleUpImages(e){
-	    this.style.width = "40%";
+	    this.style.transform = "scale(1.2,1.2)";
 	}
 
 	function scaleDownImages(e){
-	    this.style.width = "30%";
+	    this.style.transform = "scale(1.2,1.2)";
 	}
 
 

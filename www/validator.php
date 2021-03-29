@@ -14,7 +14,7 @@
         $isCorrect = false;
         $name_error = "Enter name!";
     }
-    elseif(!preg_match($usernameRegex, $username))
+    elseif(false)//!preg_match($usernameRegex, $username))
     {
         $isCorrect = false;
         $name_error = "Invalid name!";
@@ -26,7 +26,7 @@
         $isCorrect = false;
         $email_error = "Enter email!";
     }
-    elseif(!preg_match($emailRegex, $email))
+    elseif(false)//!preg_match($emailRegex, $email))
     {
         $isCorrect = false;
         $email_error = "Invalid email!";
@@ -38,7 +38,7 @@
         $isCorrect = false;
         $number_error = "Enter number!";
     }
-    elseif(!preg_match($numberRegex, $number))
+    elseif(false)//!preg_match($numberRegex, $number))
     {
         $isCorrect = false;
         $number_error = "Invalid number!";

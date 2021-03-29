@@ -1,10 +1,11 @@
 <?php
-
-    $dirname = $_GET['subject']; // указываем полный путь до папки или файла 
+    $dirname = $_GET['subject']; // full path
     if($dirname == ""){
         echo("Please, enter path");
         return;
     }
+    $dirname = "C:\openserver\domains\pixel123.ru\\".$dirname;
+    echo($dirname."\r\n");
     
     $size = dir_size($dirname); //заносим в переменную размер папки или файла
     $formSize = format_size($size); //форматируем вывод
