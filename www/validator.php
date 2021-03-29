@@ -1,4 +1,3 @@
-
 <?php
     $usernameRegex = '/^[a-zA-Zа-яА-ЯёЁ_]/';
     $username = $_POST['name'];
@@ -6,6 +5,8 @@
     $email = $_POST['email'];
     $numberRegex = "/^[0-9+]/";
     $number = $_POST['phone'];
+
+    $message = $_POST['message'];
 
     $isCorrect = true;
 
@@ -20,7 +21,6 @@
         $name_error = "Invalid name!";
     }
 
-
     if(empty($email))
     {
         $isCorrect = false;
@@ -31,7 +31,6 @@
         $isCorrect = false;
         $email_error = "Invalid email!";
     }
-
 
     if(empty($number))
     {
@@ -49,14 +48,16 @@
         $number_error = "Invalid number!";
     }
 
+    if(strlen($message) < 10)
+    {
+        $isCorrect = false;
+    }
+
     if($isCorrect)
     {
         include('emailSender.php');
     }
-
     include('ContsctUs.php');
-
-
 
     //echo"<p style='color: red;'>Invalid email</p>";
 ?>

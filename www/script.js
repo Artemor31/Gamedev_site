@@ -1,18 +1,9 @@
 $(function(){
-
 	let header = $("#header");
 	let progress = $("#progress_line");
-	let intro = $("#intro");
-
 	let scrollPos = $(window).scrollTop();
-	let introHg = intro.innerHeight();
-
-	let intro__title = $("#intro__title");
-
-
 
 	$(window).on('scroll', function() {
-
 		scrollPos = $(this).scrollTop();
 		if(scrollPos > 750){
 			header.addClass("fixed");	
@@ -22,38 +13,38 @@ $(function(){
 			header.removeClass("fixed");
 			progress.removeClass("fixed");
 		}
-
 	});
 });
-
 
 window.onload = function(){ 
 	var line = document.getElementById('progress_line');
 	window.addEventListener('scroll', progressBar);
 		
 	function progressBar(e) {
-	var windowScroll = document.body.scrollTop || 
-	document.documentElement.scrollTop;
-	var windowHeight = document.documentElement.scrollHeight - 
-	document.documentElement.clientHeight; 
-	var width_progress_line = windowScroll / windowHeight * 100;
-	line.style.width = width_progress_line + '%';
+		var windowScroll = document.body.scrollTop || 
+		document.documentElement.scrollTop;
+		var windowHeight = document.documentElement.scrollHeight - 
+		document.documentElement.clientHeight; 
+		var width_progress_line = windowScroll / windowHeight * 100;
+		line.style.width = width_progress_line + '%';
 	}
 
     StartTimer();
+<<<<<<< HEAD
 
 	let regexAlphabet = /[A-Za-z]/;
 	let regexEmail = /[A-Za-z0-9\._\-]+@[A-Za-z]+\.[a-z]/;
 	let regexNumbers = /[0-9]+/;
 
+=======
+>>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
 	closeMenu();
-
-
 
 	let navLinks = document.getElementsByClassName("nav_link_inner")
 	for (var i = 0; i < navLinks.length; i++) {
 		navLinks[i].onmouseenter = openSubMenu;
 	}
+
 	function openSubMenu(event){
 		var target = event.target;
 		if(target.className == "nav_link_inner"){
@@ -105,6 +96,13 @@ window.onload = function(){
 		window.scrollTo(0,0);
 	}
 
+<<<<<<< HEAD
+=======
+	let regexAlphabet = /[A-Za-z]/;
+	let regexEmail = /[A-Za-z0-9\._\-]+@[A-Za-z]+\.[a-z]/;
+	let regexNumbers = /[0-9]+/;
+
+>>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
 	let submitBtn = document.getElementById('submit');
 	if(submitBtn != null){
 		submitBtn.onclick = function(e){
@@ -135,7 +133,10 @@ window.onload = function(){
 			element.innerHTML = "";
 		}		
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
 
 	let memberImages = document.getElementsByClassName("member_photo");
 	for (var i = 0; i < memberImages.length; i++) {
@@ -150,7 +151,6 @@ window.onload = function(){
 	function scaleDownImages(e){
 	    this.style.transform = "scale(1.2,1.2)";
 	}
-
 
 	function StartTimer() {
 	    sec = 0;

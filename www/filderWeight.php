@@ -4,14 +4,18 @@
         echo("Please, enter path");
         return;
     }
+<<<<<<< HEAD
     $dirname = "C:\openserver\domains\pixel123.ru\\".$dirname;
+=======
+    $dirname = "O:\OpenServer\domains\pixel123.ru\\".$dirname;
+>>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
     echo($dirname."\r\n");
     
-    $size = dir_size($dirname); //заносим в переменную размер папки или файла
-    $formSize = format_size($size); //форматируем вывод
+    $size = dir_size($dirname); 
+    $formSize = format_size($size); 
     echo $formSize;
  
-    // функция для просмотра всех подпапок и всех вложенных файлов
+    // recurs
     function dir_size($dirname) {
         $totalsize=0;
         if ($dirstream = @opendir($dirname)) {
@@ -29,7 +33,8 @@
         closedir($dirstream);
         return $totalsize;
     }
-    // функция форматирует вывод размера
+    
+    // formating
     function format_size($size){
          $metrics[0] = 'bites';
          $metrics[1] = 'Kb';

@@ -1,14 +1,10 @@
-	<?php 
-		$to  = "artem.artemov311@gmail.com";
-		
+<?php 
+	$to  = "artem.artemov311@gmail.com";
+	$subject = "Message from PixelBit"; 
 
-		$subject = "Заголовок письма"; 
+	$headers .= "Content-Type: text/html; charset=utf-8 \r\n"; 
+	$headers .= "From: <pixel123.ru> \r\n"; 
+	$headers .= "Reply-To: ".$email." \r\n"; 
 
-		$message = ' <p>Текст письма</p> </br> <b>1-ая строчка </b> </br><i>2-ая строчка </i> </br>';
-
-		$headers  = "Content-type: text/html; charset=windows-1251 \r\n"; 
-		$headers .= "From: От кого письмо <from@example.com>\r\n"; 
-		$headers .= "Reply-To: reply-to@example.com\r\n"; 
-
-		mail($to, $subject, $message, $headers); 
-	?>
+	mail($to, $subject, $message, $headers); 
+?>
