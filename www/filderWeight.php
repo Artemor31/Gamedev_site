@@ -4,11 +4,7 @@
         echo("Please, enter path");
         return;
     }
-<<<<<<< HEAD
     $dirname = "C:\openserver\domains\pixel123.ru\\".$dirname;
-=======
-    $dirname = "O:\OpenServer\domains\pixel123.ru\\".$dirname;
->>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
     echo($dirname."\r\n");
     
     $size = dir_size($dirname); 

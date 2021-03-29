@@ -30,14 +30,6 @@ window.onload = function(){
 	}
 
     StartTimer();
-<<<<<<< HEAD
-
-	let regexAlphabet = /[A-Za-z]/;
-	let regexEmail = /[A-Za-z0-9\._\-]+@[A-Za-z]+\.[a-z]/;
-	let regexNumbers = /[0-9]+/;
-
-=======
->>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
 	closeMenu();
 
 	let navLinks = document.getElementsByClassName("nav_link_inner")
@@ -96,13 +88,10 @@ window.onload = function(){
 		window.scrollTo(0,0);
 	}
 
-<<<<<<< HEAD
-=======
 	let regexAlphabet = /[A-Za-z]/;
 	let regexEmail = /[A-Za-z0-9\._\-]+@[A-Za-z]+\.[a-z]/;
 	let regexNumbers = /[0-9]+/;
 
->>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
 	let submitBtn = document.getElementById('submit');
 	if(submitBtn != null){
 		submitBtn.onclick = function(e){
@@ -133,10 +122,6 @@ window.onload = function(){
 			element.innerHTML = "";
 		}		
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ad4ed53b1bfe5c4ca9b1198523d0ad733d1ed69
 
 	let memberImages = document.getElementsByClassName("member_photo");
 	for (var i = 0; i < memberImages.length; i++) {
