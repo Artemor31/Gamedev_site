@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php 
+	include('validator.php');
+?>
 	<?php
-        require('links.php');
-    ?>
-	<title>
-		PixelBit
-	</title>
-</head>
-<body>
-
+if (!empty($_GET)) {
+    if($_GET['ok']==="ok") {?>
+    <div class="form-success">Форма успешно отправлена!</div>
     <?php
-        require('header.php');
-    ?>
+}}
+?>
+<?php
+$headName = 'PixelBit';
+    require('meta.php');?> 
+<body>
+<?php
+	require('header.php');
+?>
+
 
 <div id="progress_line"></div>
 	<div class="title__img">
@@ -55,10 +56,11 @@
 			</div>
 		</div>
 	</div>
+	
 
 	<div class="container">	
 		<div class="feedback__form">
-			<form class="form_message" action="validator.php" method="POST">
+			<form class="form_message" action="ContsctUs.php" method="POST">
 				<p class="form__headliner">
 					Submit your message
 				</p>
@@ -69,7 +71,7 @@
 					<p>
 						Your Name:
 					</p>
-					<input id="input__name" class="input" name="name" type="text" value="<?php echo $username?>"/>
+					<input id="input__name" class="input" name="name" type="text" value='<?= !empty($_POST['name']) ? $_POST['name'] : '' ?>'/>
 						<?php if(isset($name_error)) { ?>
 							<p style='color: red;'><?php echo $name_error?></p>
 						<?php } ?>						
@@ -82,7 +84,7 @@
 					<p>
 						Your E-mail:
 					</p>
-					<input id="input__email" class="input" name="email" type="text" value="<?php echo $email?>"/>					
+					<input id="input__email" class="input" name="email" type="text" value='<?= !empty($_POST['email']) ? $_POST['email'] : '' ?>'/>					
 						<?php if(isset($email_error)) { ?>
 							<p style='color: red;'><?php echo $email_error?></p>
 						<?php } ?>
@@ -95,7 +97,7 @@
 					<p>
 						Your phone:
 					</p>
-					<input id="input__number" class="input" name="phone" type="text" value="<?php echo $number?>"/>
+					<input id="input__number" class="input" name="phone" type="text" value='<?= !empty($_POST['phone']) ? $_POST['phone'] : '' ?>'/>
 						<?php if(isset($number_error)) { ?>
 							<p style='color: red;'><?php echo $number_error?></p>
 						<?php } ?>

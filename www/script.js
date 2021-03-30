@@ -16,7 +16,15 @@ $(function(){
 	});
 });
 
+/*
+
 window.onload = function(){ 
+    StartTimer();
+	closeMenu();
+
+	//
+	// progress line
+	//
 	var line = document.getElementById('progress_line');
 	window.addEventListener('scroll', progressBar);
 		
@@ -29,9 +37,9 @@ window.onload = function(){
 		line.style.width = width_progress_line + '%';
 	}
 
-    StartTimer();
-	closeMenu();
-
+	//
+	// Menu
+	//
 	let navLinks = document.getElementsByClassName("nav_link_inner")
 	for (var i = 0; i < navLinks.length; i++) {
 		navLinks[i].onmouseenter = openSubMenu;
@@ -88,41 +96,51 @@ window.onload = function(){
 		window.scrollTo(0,0);
 	}
 
-	let regexAlphabet = /[A-Za-z]/;
-	let regexEmail = /[A-Za-z0-9\._\-]+@[A-Za-z]+\.[a-z]/;
-	let regexNumbers = /[0-9]+/;
+	//
+	// input validation
+	//
+	// let regexAlphabet = /[A-Za-z]/;
+	// let regexEmail = /^[A-Za-z]+[A-Za-z0-9\._\-]*@[A-Za-z]+\.[a-z]{2,8}$/;
+	// let regexNumbers = /[0-9]+/;
 
-	let submitBtn = document.getElementById('submit');
-	if(submitBtn != null){
-		submitBtn.onclick = function(e){
-			let nameArea = document.getElementById('input__name');
-			let emailArea = document.getElementById('input__email');
-			let phoneArea = document.getElementById('input__number');
+	// let submitBtn = document.getElementById('submit');
+	// if(submitBtn != null){
+	// 	submitBtn.onclick = function(e){
+	// 		//e.preventDefault();
 
-			let nameColorer = document.getElementById('name_colorer');
-			indicateInput(isValid(regexAlphabet, nameArea), nameColorer);
+	// 		let nameArea = document.getElementById('input__name');
+	// 		let emailArea = document.getElementById('input__email');
+	// 		let phoneArea = document.getElementById('input__number');
 
-			let emailColorer = document.getElementById('email_colorer');
-			indicateInput(isValid(regexEmail, emailArea), emailColorer);
+	// 		let nameColorer = document.getElementById('name_colorer');
+	// 		indicateInput(isValid(regexAlphabet, nameArea), nameColorer);
 
-			let phoneColorer = document.getElementById('phone_colorer');
-			indicateInput(isValid(regexNumbers, phoneArea), phoneColorer);
+	// 		let emailColorer = document.getElementById('email_colorer');
+	// 		indicateInput(isValid(regexEmail, emailArea), emailColorer);
+
+	// 		let phoneColorer = document.getElementById('phone_colorer');
+	// 		indicateInput(isValid(regexNumbers, phoneArea), phoneColorer);
 	
-		}
-	}
-	function isValid(reg, input){
-		var booler = reg.test(input.value);
-		var booler2 = input.value != "";
-		return booler && booler2;
-	}
-	function indicateInput(isValid, element){
-		if(!isValid){
-		 element.innerHTML = "Incorrect value";
-		} else {			
-			element.innerHTML = "";
-		}		
-	}
+	// 	}
+	// }
 
+	// function isValid(reg, input){
+	// 	var booler = reg.test(input.value);
+	// 	var booler2 = input.value != "";
+	// 	return booler && booler2;
+	// }
+
+	// function indicateInput(isValid, element){
+	// 	if(!isValid){
+	// 	 element.innerHTML = "Incorrect value";
+	// 	} else {			
+	// 		element.innerHTML = "";
+	// 	}		
+	// }
+
+	//
+	// photo scaler
+	//
 	let memberImages = document.getElementsByClassName("member_photo");
 	for (var i = 0; i < memberImages.length; i++) {
 		memberImages[i].onmouseenter = scaleUpImages;
@@ -134,9 +152,13 @@ window.onload = function(){
 	}
 
 	function scaleDownImages(e){
-	    this.style.transform = "scale(1.2,1.2)";
+	    this.style.transform = "scale(1,1)";
 	}
 
+
+	//
+	// Timer
+	//
 	function StartTimer() {
 	    sec = 0;
 		min = 0;
@@ -186,3 +208,5 @@ window.onload = function(){
 	    }
 	}
 };
+
+*/

@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-        require('links.php');
-    ?>
-    <title>
-        PixelBit
-    </title>
-</head>
-
-<body>
-
+<?php
+$headName = 'PixelBit';
+    require('meta.php');
+?>   
 <?php
     require('header.php');
 ?>    
@@ -140,10 +129,5 @@
 <?php
   require('footer.php');
 ?> 
-
-<script src="script.js"></script>
-<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-</body>
-</html>
 
 

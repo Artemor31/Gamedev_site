@@ -47,4 +47,7 @@
         </div>
     </div>
 </footer>
-
+<script src="script.js"></script>
+<script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
+</body>
+</html>
