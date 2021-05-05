@@ -14,6 +14,6 @@
 
 	mail($to, $subject, $emailMessage, $headers);
 
-	header("Location: http://{$_SERVER['HTTP_HOST']}/www/ContsctUs.php?ok=ok");
+	//header("Location: http://{$_SERVER['HTTP_HOST']}/www/ContsctUs.php?ok=ok");
 	exit;
 ?>
