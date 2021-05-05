@@ -16,9 +16,9 @@ $(function(){
 	});
 });
 
-/*
 
 window.onload = function(){ 
+	debugger;
     StartTimer();
 	closeMenu();
 
@@ -66,7 +66,6 @@ window.onload = function(){
 	}
 
 	function closeMenu(){
-		var menu = document.getElementById("nav");
 		var subMenu = document.getElementsByClassName("submenu");
 
 		for (var i = 0; i < subMenu.length; i++) {
@@ -209,4 +208,3 @@ window.onload = function(){
 	}
 };
 
-*/

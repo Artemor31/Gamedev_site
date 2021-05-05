@@ -1,13 +1,5 @@
-<?php 
-	include('validator.php');
-?>
-	<?php
-if (!empty($_GET)) {
-    if($_GET['ok']==="ok") {?>
-    <div class="form-success">Форма успешно отправлена!</div>
-    <?php
-}}
-?>
+
+
 <?php
 $headName = 'PixelBit';
     require('meta.php');?> 
@@ -21,7 +13,6 @@ $headName = 'PixelBit';
 	<div class="title__img">
 		<img src="img/teamwork_support.png" alt="">
 	</div>
-
 	<div class="contact__title">
 		<h2>
 			Contact us, we need your opinion
@@ -60,10 +51,20 @@ $headName = 'PixelBit';
 
 	<div class="container">	
 		<div class="feedback__form">
-			<form class="form_message" action="ContsctUs.php" method="POST">
+			<form class="form_message" action="validator.php" method="POST">
 				<p class="form__headliner">
 					Submit your message
 				</p>
+
+								
+				<?php
+					if (!empty($_GET)) {
+						if($_GET['ok']==="ok") {?>
+						<div style = "text-align: center; font-size: 22px; color: #00ff00;" class="form-success">Форма успешно отправлена!</div>
+						<?php
+					}}
+				?>
+
 				<div class="titles">
 				<!--
 					Name Input
@@ -71,7 +72,7 @@ $headName = 'PixelBit';
 					<p>
 						Your Name:
 					</p>
-					<input id="input__name" class="input" name="name" type="text" value='<?= !empty($_POST['name']) ? $_POST['name'] : '' ?>'/>
+					<input id="input__name" class="input" name="name" type="text" value='<?= !empty($_POST['input__name']) ? $_POST['input__name'] : '' ?>'/>
 						<?php if(isset($name_error)) { ?>
 							<p style='color: red;'><?php echo $name_error?></p>
 						<?php } ?>						
@@ -84,7 +85,7 @@ $headName = 'PixelBit';
 					<p>
 						Your E-mail:
 					</p>
-					<input id="input__email" class="input" name="email" type="text" value='<?= !empty($_POST['email']) ? $_POST['email'] : '' ?>'/>					
+					<input id="input__email" class="input" name="email" type="text" value='<?= (!empty($_POST['input__email'])) ? $_POST['input__email'] : '' ?>'/>					
 						<?php if(isset($email_error)) { ?>
 							<p style='color: red;'><?php echo $email_error?></p>
 						<?php } ?>
