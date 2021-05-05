@@ -1,5 +1,3 @@
-
-
 <?php
 $headName = 'PixelBit';
     require('meta.php');?> 
@@ -7,8 +5,6 @@ $headName = 'PixelBit';
 <?php
 	require('header.php');
 ?>
-
-
 <div id="progress_line"></div>
 	<div class="title__img">
 		<img src="img/teamwork_support.png" alt="">

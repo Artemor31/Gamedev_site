@@ -1,5 +1,3 @@
-<?php?>
-
 <footer class="footer">
     <div class="container">
         <div class="footer__items">

@@ -1,11 +1,13 @@
-<?php
-$headName = 'PixelBit';
-    require('meta.php');
-?>   
-<?php
-    require('header.php');
-?>    
+<?php session_start();
 
+$headName = 'PixelBit';
+
+//$headName = "qwe";
+
+require('meta.php');
+require('header.php');
+ 
+?>    
 <div class="intro" id="intro">
     <div class="container">
         <div class="inner">
@@ -128,6 +130,10 @@ $headName = 'PixelBit';
 
 <?php
   require('footer.php');
+  
+echo $_SESSION['id'];  
+echo $_SESSION['login'];  
+echo $_SESSION['pass'];  
 ?> 
 
 

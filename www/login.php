@@ -1,4 +1,4 @@
-<?php session_start();
+<?php //session_start();
 error_reporting(E_ALL);
 ini_set('display_startup_errors', 1);
 ini_set('display_errors', '1');?>
@@ -8,19 +8,14 @@ $headName = 'Страница авторизации';
     require('meta.php');
 ?> 
 <?php
-
-echo($_POST['debug']);
-echo($_POST['login']);
-echo($_POST['pass']);
         if (isset($_SESSION["message"])) {
-             echo "<div>".$_SESSION["message "]."</div>";
-               unset($_SESSION["message"]);
+            echo("<div>".$_SESSION["message "]."</div>");
+            unset($_SESSION["message"]);
          }
          if (isset($_SESSION["debug"])) {
               echo($_SESSION["debug"]);
           }         
     ?>
-
     <form action="authorize.php" method="post">
         Вход<br/>
         Пользователь <input type="text" name="login"/><br/>

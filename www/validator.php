@@ -68,7 +68,6 @@
     }
 
     //include('ContsctUs.php');
-
     //echo"<p style='color: red;'>Invalid email</p>";
 ?>
 

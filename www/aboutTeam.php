@@ -1,5 +1,3 @@
-
-
 <?php
 $headName = 'PixelBit';
     require('meta.php');
@@ -79,8 +77,7 @@ $headName = 'PixelBit';
 
 <?php
 		require('footer.php');
-?> 
-
+?>
 <script src="script.js"></script>
 </body>
 </html>
