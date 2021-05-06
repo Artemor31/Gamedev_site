@@ -44,6 +44,11 @@
                         </div>
                     </a>
                 </div>
+                <div class="nav__link">
+                <a href="login.php" class="nav_link_inner">
+                    Login
+                </a>
+                </div>
             </nav>
         </div>
     </div>
