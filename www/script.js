@@ -1,20 +1,10 @@
 $(function(){
 	let header = $("#header");
 	let progress = $("#progress_line");
-	let scrollPos = $(window).scrollTop();
+	header.addClass("fixed");
+	progress.addClass("fixed");	
+});	
 
-	$(window).on('scroll', function() {
-		scrollPos = $(this).scrollTop();
-		if(scrollPos > 750){
-			header.addClass("fixed");	
-			progress.addClass("fixed");		
-		}
-		else {
-			header.removeClass("fixed");
-			progress.removeClass("fixed");
-		}
-	});
-});
 
 
 window.onload = function(){ 
