@@ -5,6 +5,18 @@ $(function(){
 	progress.addClass("fixed");	
 });	
 
+	$(window).on('scroll', function() {
+		scrollPos = $(this).scrollTop();
+		if(scrollPos > 0){
+			header.addClass("fixed");	
+			progress.addClass("fixed");		
+		}
+		else {
+			header.removeClass("fixed");
+			progress.removeClass("fixed");
+		}
+	});
+});
 
 
 window.onload = function(){ 

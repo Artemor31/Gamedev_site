@@ -1,3 +1,10 @@
+<?php
+    if($_SESSION['user']){
+        $anchor = "login/logout.php";
+    }else{
+        $anchor = "login/registration.php";
+    }
+?>
 <body>
 <div class="upBttn">
     <div class="arrow">&#8593;</div>
@@ -44,10 +51,18 @@
                         </div>
                     </a>
                 </div>
+
                 <div class="nav__link">
-                <a href="login.php" class="nav_link_inner">
-                    Login
-                </a>
+                    <a href = <?php echo  $anchor ?> class="nav_link_inner">
+                    <?php
+                        if($_SESSION['user']){
+                            $user = $_SESSION['user'];
+                            echo "Logout";
+                        }else{
+                            echo "Login";
+                        }
+                        ?>
+                    </a>
                 </div>
             </nav>
         </div>
