@@ -130,10 +130,6 @@ require('header.php');
 
 <?php
   require('footer.php');
-  
-echo $_SESSION['id'];  
-echo $_SESSION['login'];  
-echo $_SESSION['pass'];  
 ?> 
 
 
