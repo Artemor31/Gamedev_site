@@ -5,7 +5,9 @@
     $login = $_POST['login'];
     $password = md5($_POST['password']);
 
-    $check_user = mysqli_query($connect, "SELECT * FROM 'users' WHERE 'login' = '$login' AND 'password' = '$password'");
+
+    //$query_selector = mysqli_query($connect, "INSERT INTO users VALUES (NULL, '$login', '$email', '$password')");    
+    $check_user = mysqli_query($connect, "SELECT * FROM users WHERE login = '$login' AND `password` = '$password'");
    
     if(!$check_user){
         die('Cannot select user');
@@ -17,10 +19,11 @@
         $_SESSION['user'] = 
         [
             "id" => $user['id'],
-            "login" => $login['login'],
+            "login" => $user['login'],
             "email" => $user['email']
         ];
         header('Location: ../index.php');
+
 
     } else {
         $_SESSION['message'] = 'Не верный логин или пароль';
