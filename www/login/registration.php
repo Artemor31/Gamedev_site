@@ -14,9 +14,7 @@
 </head>
 <body>
 
-    <!-- Форма регистрации -->
-
-    <form action="vendor/signup.php" method="post" enctype="multipart/form-data">
+    <form action="signup.php" method="post"">
         <label>Логин</label>
         <input type="text" name="login" placeholder="Введите свой логин">
         <label>Почта</label>
@@ -27,7 +25,7 @@
         <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
         <button type="submit">Войти</button>
         <p>
-            У вас уже есть аккаунт? - <a href="/">авторизируйтесь</a>!
+            У вас уже есть аккаунт? - <a href="signinForm.php">авторизируйтесь</a>!
         </p>
         <?php
             if ($_SESSION['message']) {

@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost'; 
-$database = 'lab4DB'; 
+$database = 'lab4db'; 
 $user = 'root'; 
 $password = 'root'; 
 $connect = mysqli_connect($host, $user, $password, $database);
