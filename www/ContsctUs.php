@@ -1,7 +1,8 @@
 <?php
+session_start();
 $headName = 'PixelBit';
-    require('meta.php');?> 
-<body>
+    require('meta.php');
+?>
 <?php
 	require('header.php');
 ?>
@@ -51,8 +52,11 @@ $headName = 'PixelBit';
 				<p class="form__headliner">
 					Submit your message
 				</p>
-
-								
+				<?php 
+					if(!$_SESSION['user']){
+						echo "<p style = \" color:red; \" >Only authorized users can send e-mails!</p>";
+					}
+				?>								
 				<?php
 					if (!empty($_GET)) {
 						if($_GET['ok']==="ok") {?>
@@ -104,7 +108,7 @@ $headName = 'PixelBit';
 					<p>Text:</p>
 					<textarea id="input__text" class="input" name="message" cols="22" rows="5"></textarea>
 				</div>
-				<input id="submit" class="submit" value="Send" type="submit"/>
+				<input id="submit" class="submit" value="Send" type=<?php if($_SESSION['user']){echo "submit";}else{echo "reset";}?> />
 			</form>
 		</div>
 	</div>

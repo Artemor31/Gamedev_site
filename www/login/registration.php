@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <form action="signup.php" method="post"">
+    <form action="signup.php" method="post">
         <label>Логин</label>
         <input type="text" name="login" placeholder="Введите свой логин">
         <label>Почта</label>

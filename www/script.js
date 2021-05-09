@@ -5,7 +5,7 @@ $(function(){
 
 	$(window).on('scroll', function() {
 		scrollPos = $(this).scrollTop();
-		if(scrollPos > 750){
+		if(scrollPos > 0){
 			header.addClass("fixed");	
 			progress.addClass("fixed");		
 		}
