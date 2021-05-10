@@ -12,6 +12,10 @@
 	' Number: '.$number.
 	' Email '.$email;
 
+	require('login/connection.php');
+
+	$query_selector = mysqli_query($connect, "INSERT INTO emails VALUES (NULL, '$username', '$email', '$number', '$emailMessage')");
+
 	mail($to, $subject, $emailMessage, $headers);
 
 	header("Location: http://{$_SERVER['HTTP_HOST']}/www/ContsctUs.php?ok=ok");
