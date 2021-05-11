@@ -1,18 +1,35 @@
 <?php
-session_start();
-$headName = 'PixelBit';
+	session_start();
+	$headName = 'PixelBit';
+
     require('meta.php');
-?>
-<?php
 	require('header.php');
+	require('login/connection.php');
+	
+	$query ="SELECT content FROM pagescontent WHERE id > 18"; 
+	$result = mysqli_query($connect, $query) or die("Ошибка " . mysqli_error($link)); 
+	
+	if($result)
+	{
+		$count = mysqli_num_rows($result);
+		$rows = mysqli_fetch_all($result, MYSQLI_NUM); 
+	}
+	$content = null;
+	for($i = 0; $i < $count; $i++){
+		$row = $rows[$i];
+		$content[$i] = $row[0];
+	}
+	
+	mysqli_close($connect);
 ?>
+
 <div id="progress_line"></div>
 	<div class="title__img">
 		<img src="img/teamwork_support.png" alt="">
 	</div>
 	<div class="contact__title">
 		<h2>
-			Contact us, we need your opinion
+		<?php echo "$content[0]";?>	
 		</h2>
 	</div>
 
@@ -25,20 +42,20 @@ $headName = 'PixelBit';
 						<th align="left">E-mail</th>
 					</tr>
 					<tr>
-						<td>Support</td>
-						<td>support@pixelBit.com</td>
+						<td><?php echo "$content[1]";?></td>
+						<td><?php echo "$content[2]";?></td>
 					</tr>
 					<tr>
-					    <td>Job</td>
-					    <td>job@pixelBit.com</td>
+					    <td><?php echo "$content[3]";?></td>
+					    <td><?php echo "$content[4]";?></td>
 					  </tr>
 					  <tr>
-					    <td>Press</td>
-					    <td>press@pixelBit.com</td>
+					    <td><?php echo "$content[5]";?></td>
+					    <td><?php echo "$content[6]";?>/td>
 					  </tr>
 					  <tr>
-					    <td>Common</td>
-					    <td>contact@pixelBit.com</td>
+					    <td><?php echo "$content[7]";?></td>
+					    <td><?php echo "$content[8]";?></td>
 					  </tr>
 				</table>
 			</div>
@@ -54,13 +71,13 @@ $headName = 'PixelBit';
 				</p>
 				<?php 
 					if(!$_SESSION['user']){
-						echo "<p style = \" color:red; \" >Only authorized users can send e-mails!</p>";
+						echo "<center style = \" color:#c064A6; \" >Only authorized users<br>allowed to send e-mails!</center>";
 					}
 				?>								
 				<?php
 					if (!empty($_GET)) {
 						if($_GET['ok']==="ok") {?>
-						<div style = "text-align: center; font-size: 22px; color: #00ff00;" class="form-success">Форма успешно отправлена!</div>
+						<div style = "text-align: center; font-size: 22px; color: #42A69E;" class="form-success">Form sended!</div>
 						<?php
 					}}
 				?>
@@ -118,10 +135,10 @@ $headName = 'PixelBit';
 		<div class="support">
 			<div class="support__text">
 				<div class="support__text__title">
-					Still have problems?
+				<?php echo "$content[9]";?>
 				</div>
 				<div class="support__text__content">
-					Open private chat with our agent and ask everything you want.
+				<?php echo "$content[10]";?>
 				</div>
 				<a href="#" class="support__text__botton">
 					OPEN

@@ -11,21 +11,19 @@ if ($_SESSION['user']) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Авторизация и регистрация</title>
+    <title>Authorization</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
-<!-- Форма авторизации -->
-
     <form action="signin.php" method="post">
         <label>Логин</label>
-        <input type="text" name="login" placeholder="Введите свой логин">
+        <input type="text" name="login" placeholder="Enter login">
         <label>Пароль</label>
-        <input type="password" name="password" placeholder="Введите пароль">
-        <button type="submit">Войти</button>
+        <input type="password" name="password" placeholder="Enter password">
+        <button type="submit">Submit</button>
         <p>
-            У вас нет аккаунта? - <a href="registration.php">зарегистрируйтесь</a>!
+            Not registered yet? -><a href="registration.php">Registration</a>!
         </p>
         <?php
             if ($_SESSION['message']) {

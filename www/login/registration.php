@@ -9,23 +9,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Авторизация и регистрация</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
     <form action="signup.php" method="post">
-        <label>Логин</label>
-        <input type="text" name="login" placeholder="Введите свой логин">
-        <label>Почта</label>
-        <input type="email" name="email" placeholder="Введите адрес своей почты">
-        <label>Пароль</label>
-        <input type="password" name="password" placeholder="Введите пароль">
-        <label>Подтверждение пароля</label>
-        <input type="password" name="password_confirm" placeholder="Подтвердите пароль">
-        <button type="submit">Войти</button>
+        <label>Login</label>
+        <input type="text" name="login" placeholder="Enter login...">
+        <label>E-mail</label>
+        <input type="email" name="email" placeholder="Enter e-mail...">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password...">
+        <label>Confirm password</label>
+        <input type="password" name="password_confirm" placeholder="Confirm...">
+        <button type="submit">Submit</button>
         <p>
-            У вас уже есть аккаунт? - <a href="signinForm.php">авторизируйтесь</a>!
+            Already registered? -><a href="signinForm.php">Authorize now!</a>!
         </p>
         <?php
             if ($_SESSION['message']) {
