@@ -21,7 +21,7 @@
         header('Location: ../index.php');
 
     } else {
-        $_SESSION['message'] = 'Не верный логин или пароль';
+        $_SESSION['message'] = 'Login or password missmatch :(';
         header('Location: signinForm.php');
     }
     ?>
