@@ -16,7 +16,6 @@ $(function(){
 			progress.removeClass("fixed");
 		}
 	});
-});
 
 
 window.onload = function(){ 
