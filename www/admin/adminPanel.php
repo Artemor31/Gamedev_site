@@ -35,8 +35,8 @@
                     <td>   <?= $row[0]?></td>
                     <td> | <?= $row[1]?></td>
                     <td> | <?= $row[2]?></td>
-                    <td><a href="" class="buttons">Edit</a></td>
-                    <td><a href="" class="buttons">Delete</a></td>
+                    <td><a href="editUser.php?id=<?php echo $row[0]?>" class="buttons">Edit</a></td>
+                    <td><a href="deleteUser.php?id=<?php echo $row[0]?>" class="buttons">Delete</a></td>
                 </tr>
         <?php }
             //mysqli_close($connect);
@@ -64,8 +64,8 @@
                     <td><?= $row[2]?></td>
                     <td><?= $row[3]?></td>
                     <td><?= $row[4]?></td>
-                    <td><a href="" class="buttons">Edit</a></td>
-                    <td><a href="" class="buttons">Delete</a></td>
+                    <td><a href="deleteMail.php?id=<?php echo $row[0] ?>" class="buttons">Delete</a></td>
+                    <td><a href="resendMail.php?id=<?php echo $row[0] ?>" class="buttons">Resend</a></td>
                 </tr>
         <?php }
             mysqli_close($connect);
