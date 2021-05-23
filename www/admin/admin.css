@@ -1,0 +1,31 @@
+body{
+	font-family: 'Yusei Magic', sans-serif;
+	font-size: 20px;
+	color: #000;
+	margin: 0;
+    background-color: rgb(169, 212, 231);
+}
+
+.buttons{
+    display: inline-block;
+    font-size: 16px;
+    color: #cff8cB;
+    background-color: #f57fa2;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+
+    transition: .2s linear;
+}
+.buttons:hover{	
+	background-color: #f57fd8;
+	padding: 10px 18px;
+}
+
+.buttons:visited{
+ color: #040c03;
+}
+
+tr:hover{
+    background-color: rgb(140, 193, 216);
+}
