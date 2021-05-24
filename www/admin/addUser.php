@@ -5,9 +5,8 @@
     $login = $_POST['login'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $password_confirm = $_POST['password_confirm'];
 
-    if ($password === $password_confirm && strlen($login) > 2 && strlen($password) > 2) 
+    if (strlen($login) > 2 && strlen($password) > 2) 
     {
         $password = md5($password);
         $query = "SELECT * FROM users WHERE login = '$login' AND `email` = '$email'";
@@ -19,7 +18,7 @@
             if($count > 0)
             {
                 $_SESSION['message'] = 'This user already exist!';
-                header('Location: registration.php');
+                header('Location: addUser.php');
             }
             else 
             {
@@ -30,8 +29,7 @@
                     echo mysqli_error($connect);
                     die('Cannot add user to db');
                 }
-                $_SESSION['message'] = 'Registration successed!';
-                header('Location: signinForm.php');
+                header('Location: adminPanel.php');
             }
         }
         else
@@ -43,6 +41,6 @@
     else
     {
         $_SESSION['message'] = 'Invalid input';
-        header('Location: registration.php');
+        header('Location: addUser.php');
     }  
 ?>

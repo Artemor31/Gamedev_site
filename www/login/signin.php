@@ -9,7 +9,6 @@
     $query = "SELECT * FROM admins WHERE login = '$login' AND `password` = '$normalpassword'";
     $result = mysqli_query($connect, $query) or die("Ошибка " . mysqli_error($link));
 
-
     if($result)
     {         
         $count = mysqli_num_rows($result);

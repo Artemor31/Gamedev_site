@@ -122,7 +122,10 @@
 					<div id="phone_colorer" style="color: red; margin-left: 25px;"></div>
 				</div>
 				<div class="titles">
-					<p>Text:</p>
+
+					<p>
+						Text:
+					</p>
 					<textarea id="input__text" class="input" name="message" cols="22" rows="5"></textarea>
 				</div>
 				<input id="submit" class="submit" value="Send" type=<?php if($_SESSION['user']){echo "submit";}else{echo "reset";}?> />
